@@ -1,13 +1,13 @@
 
 var AWS = require('aws-sdk');
 
-async function StartInstance(_ec2,_instanceParams){
+async function StopInstance(_ec2,_instanceParams){
   return new Promise(resolve => {
     // Call EC2 to start the selected instances
-    _ec2.startInstances(_instanceParams, function(err, data) {
+    _ec2.stopInstances(_instanceParams, function(err, data) {
       if (err && err.code === 'DryRunOperation') {
         _instanceParams.DryRun = false;
-        _ec2.startInstances(_instanceParams, function(err, data) {
+        _ec2.stopInstances(_instanceParams, function(err, data) {
             if (err) {
               resolve(err);
             } else if (data) {
@@ -15,9 +15,9 @@ async function StartInstance(_ec2,_instanceParams){
             }
         });
       } else {
-        resolve("You don't have permission to start instances.");
+        resolve("You don't have permission to stop instances.");
       }
-    }); 
+    });
   });
 }
 exports.handler = async (event) => {
@@ -31,7 +31,7 @@ var instanceParams = {
   InstanceIds: ['your instance id here'],
   DryRun: true
 };
-  var ec2Result = await StartInstance(ec2,instanceParams);
+  var ec2Result = await StopInstance(ec2,instanceParams);
     const response = {
         statusCode: 200,
         body: JSON.stringify(ec2Result),
