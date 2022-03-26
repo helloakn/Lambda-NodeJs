@@ -2,7 +2,7 @@
 for the lambda tutorial. you will see the topic as the directory name,.
 
 <details>
- <summary>Managine Instance</summary>
+ <summary>Manage Ec2 Instance</summary>
  
     Create Instance. 
     Start Instance. 
@@ -12,15 +12,15 @@ for the lambda tutorial. you will see the topic as the directory name,.
 <details>
  <summary>Lambda With Layer</summary>
  
-    Create Instance. 
-    Start Instance. 
-    Stop Instance. 
+    Create Layer
+    Create Function and use layer. 
+     
 </details>
 
 <details>
  <summary>Custom Lambda Authorizer</summary>
  
-    Create Instance. 
-    Start Instance. 
-    Stop Instance. 
+    Create Login Function. 
+    Authorizer Function. 
+    Profile Function. 
 </details>
