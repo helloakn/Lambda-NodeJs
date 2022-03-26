@@ -11,13 +11,14 @@ for the lambda tutorial. you will see the topic as the directory name,.
 
 <details>
  <summary>Lambda With Layer</summary>
- 
-    ![alt text](resource/cloud-archie.png)
+
     Create Layer
     Create Function and use layer. 
-     
+
 </details>
 
+ ![alt text](resources/lambdawithlayer.png) 
+ 
 <details>
  <summary>Custom Lambda Authorizer</summary>
  
@@ -25,3 +26,7 @@ for the lambda tutorial. you will see the topic as the directory name,.
     Authorizer Function. 
     Profile Function. 
 </details>
+
+![alt text](resources/customauthorizer.png) 
+
+
